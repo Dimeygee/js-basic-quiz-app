@@ -1,0 +1,131 @@
+*,::before,::after{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+    font-family: monospace;
+}
+
+
+
+body{
+    background-color:whitesmoke;
+}
+
+h1{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:120px;
+    width:100%;
+    text-align:center;
+    color:rgba(221, 219, 219, 0.993);
+    z-index:-1;
+}
+
+.start{
+    padding:10px 20px;
+    border-radius:2px;
+    box-shadow: 0 0 0 2px black;
+    transform:translate(-50%,-50%);
+    top:50%;
+    left:43%;
+    position:absolute;
+    cursor:pointer;
+    transition:0.4s;
+    transform:scale(0);
+    opacity:0;
+}
+
+.style_num{
+    display: inline-block;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    box-shadow: 0 0 1px 1px lightgrey;
+    line-height:30px;
+    text-align:center;
+}
+
+#wrapper{
+    transform:translate(-50%,-50%);
+    top:50%;
+    left:50%;
+    position:absolute;
+    width:70%;
+    display:none;
+}
+
+.question{
+    font-size: 28px;
+}
+
+.options_container{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    cursor:pointer;
+    grid-gap:15px;
+    margin:20px 0;
+}
+
+.options_container > button,.next_prev_box > button{
+    border:none;
+    padding:10px 10px;
+    outline:none;
+    cursor: pointer;
+    transition:0.3s;
+    box-shadow: 0 0 1px 1px lightgrey;
+}
+
+.options_container > button:hover{
+    background-color:lightgrey;
+}
+
+.scores{
+    width:200px;
+    height:150px;
+    position:absolute;
+    box-shadow:0 0 1px 1px black;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    line-height:150px;
+    display:none;
+}
+
+
+.next_prev_box{
+    display:flex;
+    justify-content: flex-end;
+}
+
+.next_prev_box > button{
+    margin:3px;
+}
+
+button:active{
+    transform:scale(1.2);
+}
+
+.clicked {
+    background-color:lightgrey;
+}
+
+.fadein{
+    transform:scale(1);
+    opacity:1;
+}
+
+@media screen and (max-width:603px){
+
+    .options_container{
+        grid-gap:15px;
+    }
+
+    #wrapper{
+        width:100%;
+        padding:0 15px;
+    }
+
+}
